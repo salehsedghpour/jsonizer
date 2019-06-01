@@ -20,8 +20,8 @@
 
 // Driver code
 int main() {
-    printf("mamadkhan");
-        int sockfd;
+
+    int sockfd;
         char buffer[MAXLINE];
         char *hello = "Hello from server";
         struct sockaddr_in servaddr, cliaddr;
@@ -51,6 +51,7 @@ int main() {
     char *token;
     while(1) {
         printf("mamadkhan");
+        perror("socket creation mamad");
         int len, n;
         n = recvfrom(sockfd, (char *) buffer, MAXLINE, MSG_WAITALL, (struct sockaddr *) &cliaddr, &len);
         buffer[n] = '\0';
