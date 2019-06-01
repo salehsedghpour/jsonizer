@@ -199,7 +199,7 @@ split(const char *str1, char sep)
                 /* Code */
                 break;
         }
-        FILE *out = fopen("settings.json", "a");
+        FILE *out = fopen("/opt/settings.json", "a");
         fprintf(out, "%s", total);
         fclose(out);
         //printf("mamad");
