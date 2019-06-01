@@ -1,4 +1,4 @@
-FROM gcc:7
+FROM gcc:7 as builder
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.14.3/cmake-3.14.3-Linux-x86_64.sh \
       -q -O /tmp/cmake-install.sh \
@@ -15,4 +15,8 @@ WORKDIR "/opt/jsonizer"
 RUN cmake .
 RUN make
 
+FROM gcc:7 as jsonizer
 
+COPY --from=builder  /opt/jsonizer/cmake-build-debug/untitled  /opt/jsonizer
+EXPOSE 8080
+ENTRYPOINT /opt/jsonizer

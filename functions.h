@@ -202,6 +202,7 @@ split(const char *str1, char sep)
         FILE *out = fopen("settings.json", "a");
         fprintf(out, "%s", total);
         fclose(out);
+        printf("mamad");
 
         free(total);
         free(total_str);
