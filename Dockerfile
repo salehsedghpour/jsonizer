@@ -18,5 +18,5 @@ RUN make
 #FROM gcc:7 as jsonizer
 
 #COPY --from=builder  /opt/jsonizer/cmake-build-debug/untitled  /opt/jsonizer
-#EXPOSE 8080
+EXPOSE 8080
 ENTRYPOINT   /opt/jsonizer/cmake-build-debug/untitled > /opt/ame.log 2>&1
