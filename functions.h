@@ -14,7 +14,7 @@ split(const char *str1, char sep)
     //char str1[100];
     char newString[150][150];
     int i,j,ctr;
-    //printf("\n\n Split string by space into words :\n");
+    printf("\n\n Split string by space into words :\n");
     //printf("---------------------------------------\n");
 
 
