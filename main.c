@@ -20,7 +20,7 @@
 
 // Driver code
 int main() {
-
+    printf("mamadkhan");
         int sockfd;
         char buffer[MAXLINE];
         char *hello = "Hello from server";
